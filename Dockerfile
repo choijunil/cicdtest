@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: brian24/testweb:green
+        image: nginx
         ports:
         - containerPort: 80
 ---
@@ -28,4 +28,7 @@ spec:
   ports:
   - name: nginx-port
     targetPort: 80
+  selector:
+    app: nginx
+  type: LoadBalancer
 ---
