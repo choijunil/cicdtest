@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata: 
-  name: deploy-nginx
+  name: deploy-nginx4
 spec: 
   replicas: 3 
   selector: 
@@ -26,7 +26,7 @@ metadata:
   name: nginx-lb 
 spec: 
   ports: 
-  - name: nginx-port
+  - name: nginx-port4
     port: 80
     targetPort: 80
   selector: 
